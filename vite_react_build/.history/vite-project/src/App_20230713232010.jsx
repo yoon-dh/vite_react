@@ -1,7 +1,6 @@
 import "./App.css";
 import { Provider, useSelector, useDispatch } from "react-redux";
 import store from "./store";
-import { up } from "./counterSlice";
 
 function Counter() {
   const count = useSelector((state) => state.counter.value);
@@ -11,7 +10,7 @@ function Counter() {
     <div>
       <button
         onClick={() => {
-          dispatch(up(2));
+          dispatch(counterSlice.actions.up(2));
         }}
       >
         +

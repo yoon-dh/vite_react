@@ -11,7 +11,7 @@ function Counter() {
     <div>
       <button
         onClick={() => {
-          dispatch(up(2));
+          dispatch(counterSlice.actions.up(2));
         }}
       >
         +
